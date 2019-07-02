@@ -3,7 +3,37 @@ See more here: https://stackoverflow.com/questions/10065526/github-how-to-make-a
 
 This fork was created because in the original project plans wasn't working with the current version of Stripe API.
 
-## Commands:
+## Instalation
+
+Update your `composer.json`:
+```
+	"require": {
+		...
+		"gebit/omnipay-stripe": "^3.0",
+		...
+	},
+	...
+	"repositories": [                                                                                                                                                                                              
+        {                                                                                                                                                                                                          
+            "type": "package",                                                                                                                                                                                     
+            "package":{                                                                                                                                                                                            
+                "name": "gebit/omnipay-stripe",                                                                                                                                                                    
+                "version": "3.0.x-dev",                                                                                                                                                                            
+                "type": "package",                                                                                                                                                                                 
+                "source": {                                                                                                                                                                                        
+                    "url": "git@github.com:yurigebit/omnipay-stripe",                                                                                                                                              
+                    "type": "git",                                                                                                                                                                                 
+                    "reference": "master"                                                                                                                                                                          
+                }                                                                                                                                                                                                  
+            }                                                                                                                                                                                                      
+        }                                                                                                                                                                                                          
+    ]
+```
+
+Then run: `composer update`.
+Observation: you need use a computer that has ssh configured to access 'yurigebit/omnipay-stripe'
+
+## Development Setup
 
 Setup:
 ```
