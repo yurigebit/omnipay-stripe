@@ -78,24 +78,24 @@ class CreatePlanRequest extends AbstractRequest
     }
 
     /**
-     * Set the plan name
+     * Set the plan product
      *
      * @param $value
      * @return \Omnipay\Common\Message\AbstractRequest|CreatePlanRequest
      */
-    public function setName($value)
+    public function setProduct($value)
     {
-        return $this->setParameter('name', $value);
+        return $this->setParameter('product', $value);
     }
 
     /**
-     * Get the plan name
+     * Get the plan product
      *
      * @return string
      */
-    public function getName()
+    public function getProduct()
     {
-        return $this->getParameter('name');
+        return $this->getParameter('product');
     }
 
     /**
@@ -142,15 +142,19 @@ class CreatePlanRequest extends AbstractRequest
 
     public function getData()
     {
-        $this->validate('id', 'amount', 'currency', 'interval', 'name');
+        $this->validate('amount', 'currency', 'interval', 'product');
 
         $data = array(
-            'id' => $this->getId(),
             'amount' => $this->getAmountInteger(),
             'currency' => $this->getCurrency(),
             'interval' => $this->getInterval(),
-            'name' => $this->getName()
+            'product' => $this->getProduct(),
         );
+
+	    $id = $this->getId();
+        if ($id != null) {
+            $data['id'] = $id;
+        }
 
         $intervalCount = $this->getIntervalCount();
         if ($intervalCount != null) {
