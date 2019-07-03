@@ -1,5 +1,5 @@
 {
-    "name": "gebit/omnipay-stripe",
+    "name": "yurigebit/omnipay-stripe",
     "type": "library",
     "description": "Stripe driver for the Omnipay payment processing library",
     "homepage": "https://github.com/thephpleague/omnipay-stripe",
