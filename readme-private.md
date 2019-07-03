@@ -13,21 +13,13 @@ Update your `composer.json`:
 		...
 	},
 	...
-	"repositories": [                                                                                                                                                                                              
-        {                                                                                                                                                                                                          
-            "type": "package",                                                                                                                                                                                     
-            "package":{                                                                                                                                                                                            
-                "name": "gebit/omnipay-stripe",                                                                                                                                                                    
-                "version": "3.0.x-dev",                                                                                                                                                                            
-                "type": "package",                                                                                                                                                                                 
-                "source": {                                                                                                                                                                                        
-                    "url": "git@github.com:yurigebit/omnipay-stripe",                                                                                                                                              
-                    "type": "git",                                                                                                                                                                                 
-                    "reference": "master"                                                                                                                                                                          
-                }                                                                                                                                                                                                  
-            }                                                                                                                                                                                                      
-        }                                                                                                                                                                                                          
-    ]
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/yurigebit/omnipay-stripe.git",
+			"no-api": true
+		}
+	]
 ```
 
 Then run: `composer update`.
