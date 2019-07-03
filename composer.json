@@ -1,5 +1,6 @@
 {
     "name": "gebit/omnipay-stripe",
+
     "type": "library",
     "autoload": {
         "psr-4": { "Omnipay\\Stripe\\" : "src/" }
