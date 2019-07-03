@@ -1,9 +1,6 @@
 {
     "name": "gebit/omnipay-stripe",
     "type": "library",
-    "description": "Stripe driver for the Omnipay payment processing library",
-    "homepage": "https://github.com/thephpleague/omnipay-stripe",
-    "license": "MIT",
     "autoload": {
         "psr-4": { "Omnipay\\Stripe\\" : "src/" }
     },
